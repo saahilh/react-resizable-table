@@ -1,3 +1,5 @@
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 module.exports = {
   module: {
     rules: [
@@ -14,6 +16,12 @@ module.exports = {
           loader: 'html-loader',
         },
       },
+    ],
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: "./src/index.html",
+        filename: "./index.html",
+      }),
     ],
   },
 }
